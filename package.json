@@ -5,9 +5,9 @@
   "main": "./dist/index.js",
   "typings": "./dist/defs/index",
   "scripts": {
-    "clean": "gulp clean",
-    "build": "gulp build",
-    "test": "gulp test"
+    "clean": "rm -rf dist",
+    "build": "tsc --project ./tsconfig.json",
+    "test": "mocha dist/test"
   },
   "keywords": [
     "transmission",
@@ -23,6 +23,7 @@
     "@types/chai-as-promised": "0.0.30",
     "@types/mocha": "^2.2.41",
     "@types/source-map-support": "^0.2.28",
+    "@types/node": "^7.0.23",
     "chai": "^4.0.1",
     "chai-as-promised": "^6.0.0",
     "gulp": "^3.9.1",
@@ -35,7 +36,11 @@
     "source-map-support": "^0.4.15",
     "typescript": "^2.3.4"
   },
-  "dependencies": {
-    "@types/node": "^7.0.23"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/whiteabelincoln/transmission-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/whiteabelincoln/transmission-api/issues"
   }
 }

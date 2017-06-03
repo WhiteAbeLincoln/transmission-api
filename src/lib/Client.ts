@@ -128,6 +128,9 @@ export class Client extends EventEmitter {
         if (ids)
             options.ids = ids;
 
+        if (!fields) fields = defaultFields;
+        if (!notFields) notFields = [];
+
         fields = fields.filter(item => !(~notFields.indexOf(item)));
         fields.push("id");
         fields.push("name");
